@@ -22,7 +22,6 @@ function App() {
     Button.current.classList.add('button-disable')
     SetContent(<Loading/>)
     DownloadVIdeo(inputRef).then(result => {
-      console.log(result)
       SetDisableButton(false)
       Button.current.classList.remove('button-disable')
       if (!result.data) {
