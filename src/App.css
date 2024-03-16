@@ -1,0 +1,147 @@
+*{
+  font-family: sans-serif;
+}
+.container-form{
+  padding-bottom: 50px;
+  margin: 15px;
+  border-radius: 20px;
+  background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  h1{
+    padding: 50px 0 20px 0;
+    color: white;
+    font-size: 18pt;
+    text-align: center;
+  }
+  form{
+    width: 100%;
+    display: flex;
+  }
+  .link-con{
+    margin: auto;
+    width: 40%;
+    display: flex;
+    height: 40px;
+    .input-con{
+      position: relative;
+      border-radius: 5px;
+      display: flex;
+      flex: 1;
+      height: 100%;
+      background-color: white;
+      label{
+        position: absolute;
+        top: 45px;
+        left: 5px;
+        font-size: 9pt;
+        color: white;
+      }
+      .label-alert{
+        background-color: white;
+        padding: 5px 20px;
+        margin: 0;
+        left: 0;
+        top:-30px;
+        border-radius: 20px;
+        color: red;
+        display: block  ;
+      }
+      input{
+        margin: auto 5%;
+        font-weight: 500;
+        width: 100%;
+        height: 80%;
+        border: none;
+        outline: none;
+      }
+    }
+    button{
+      opacity: 1;
+      border: none;
+      outline: none;
+      background-color: rgb(118, 42, 225);
+      border-radius: 5px;
+      margin: 0 10px;
+      font-size: 8pt;
+      color: white;
+      height: 40px;
+      font-weight: bold;
+      padding: 0 20px;
+    }
+    .button-disable{
+      opacity: .5;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .container-form{
+    .link-con{
+      width: 80%;
+    }
+  }
+  
+}
+@media only screen and (max-width:500px){
+  .container-form{
+    .link-con{
+      display: block;
+      label{
+        display: none;
+      }
+      .button-con{
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        button{
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+.container{
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  height: 350px;
+}
+
+
+
+/* Loading */
+.loader {
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #FFF;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border-left: 4px solid #FF3D00;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
